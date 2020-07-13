@@ -6,6 +6,19 @@ module.exports = {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+      },
+      json: {
+        type: Sequelize.JSON,
+        allowNull: false,
+      },
+      createdAt:{
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updatedAt:{
+        type: Sequelize.DATE,
         allowNull: false,
       },
     })

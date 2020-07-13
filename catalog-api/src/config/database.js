@@ -7,5 +7,6 @@ module.exports = {
     define: {
         timestamp: true,
         undescored: true,
+        quoteIdentifiers: false,
     },
 }
