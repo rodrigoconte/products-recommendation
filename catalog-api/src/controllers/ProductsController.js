@@ -5,13 +5,15 @@ const readline = require('readline')
 
 module.exports = {
 
-    get_products(req, res){
-        return res.json({ Hello: 'Product' })
+    async get_products(req, res){
+        const products = await Product.findAll()
+        return res.json(products)
     },
 
-    get_by_id(req, res){
+    async get_by_id(req, res){
         const {id} = request.params
-        return res.json({ Hello: 'Algo' })
+        const product = await Product.findByPk(id);
+        return res.json(product)
     },
 
     async sync_to_database(req, res){
